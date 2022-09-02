@@ -2,9 +2,9 @@
 #view.py
 from django.shortcuts import render
 from rest_framework.response import Response
-from ..product.models import Product
+from .models import Product
 from rest_framework.views import APIView
-from ..product.serializers import ProductSerializer
+from .serializers import ProductSerializer
 
 class ProductListAPI(APIView):
     def get(self, request):
