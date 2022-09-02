@@ -7,11 +7,12 @@ from django.db import models
 #     name = models.CharField(max_length=70)
 
 class Product(models.Model):
-    product_id = models.CharField(max_length=70)
-    name = models.CharField(max_length=500)
+    name = models.CharField(max_length=70)
     price = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
-    modified_at = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return self.name
 
 # class OrderModel(models.Model):
 #     id = models.IntegerField()
